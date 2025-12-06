@@ -1,0 +1,66 @@
+/* ----- Heroエリア（画像＋中央文字） ----- */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(50px, 8vw, 60px);
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 0.08em;
+  color: #000;          /* 黒文字 */
+}
+
+/* ----- メインコンテンツ位置調整 ----- */
+.content {
+  margin-top: 100vh;
+}
+
+/* ----- 各セクション表示 ----- */
+.center-section {
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+/* ----- 固定ヘッダー ----- */
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  gap: 150px;
+  padding: 0 30px;
+  background-color: rgba(196, 30, 58, 1);
+  color: #fff;
+  z-index: 1000;
+  transition: background-color 0.4s ease;   /* ← 滑らかに変化 */
+}
+
+/* ヘッダーリンクスタイル */
+.menu a {
+  text-decoration: none;      /* 下線なし */
+  color: #fff;
+  letter-spacing: 0.15em;     /* 文字間隔広め */
+  font-weight: 600;
+}
